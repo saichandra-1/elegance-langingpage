@@ -4,6 +4,9 @@ import { ArrowRight, Instagram, Facebook, Twitter } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Mainsection } from "@/components/Mainsection"
+import { FeaturedCategories } from "@/components/FeaturedCategories"
+import { NewArrivals } from "@/components/NewArrivals"
 
 export default function Home() {
   return (
@@ -60,61 +63,9 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="relative">
-          <div className="absolute inset-0 z-10 bg-black/20" />
-          <div className="relative flex h-[80vh] items-center justify-center">
-            <Image
-              src="https://images.unsplash.com/photo-1599309329365-0a9ed45a1da3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Fashion model in elegant clothing"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="container mx-auto relative z-20 px-4 text-center text-white">
-              <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">AUTUMN COLLECTION 2025</h1>
-              <p className="mx-auto mb-8 max-w-lg text-lg">
-                Discover our latest collection of timeless elegance and contemporary style.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" className="bg-white text-black hover:bg-white/90">
-                  Shop Women
-                </Button>
-                <Button size="lg" className="bg-white text-black hover:bg-white/90">
-                  Shop Men
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Mainsection/>
 
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto">
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">Featured Categories</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {["Dresses", "Outerwear", "Accessories", "Footwear"].map((category) => (
-                <div key={category} className="group relative overflow-hidden rounded-lg">
-                  <div className="aspect-square w-full overflow-hidden bg-gray-100">
-                    <Image
-                      src={`https://images.unsplash.com/photo-1601762603339-fd61e28b698a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D=${category}`}
-                      alt={category}
-                      width={600}
-                      height={600}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-6 text-white">
-                    <div>
-                      <h3 className="text-xl font-medium">{category}</h3>
-                      <Button variant="link" className="mt-2 p-0 text-white">
-                        Shop Now <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+       <FeaturedCategories/>
 
         <section className="bg-muted py-16 md:py-24">
           <div className="container mx-auto">
@@ -146,41 +97,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto">
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">New Arrivals</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {[
-                { name: "Silk Blouse", price: "$129" },
-                { name: "Tailored Trousers", price: "$149" },
-                { name: "Cashmere Sweater", price: "$199" },
-                { name: "Leather Handbag", price: "$249" },
-              ].map((product, index) => (
-                <div key={index} className="group">
-                  <div className="aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
-                    <Image
-                      src={`https://plus.unsplash.com/premium_photo-1707932485795-1d0aed727376?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D=${product.name}`}
-                      alt={product.name}
-                      width={450}
-                      height={600}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="text-lg font-medium">{product.name}</h3>
-                    <p className="text-muted-foreground">{product.price}</p>
-                    <Button variant="ghost" className="mt-2 p-0">
-                      Add to Cart
-                    </Button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-12 text-center">
-              <Button size="lg">View All Products</Button>
-            </div>
-          </div>
-        </section>
+        <NewArrivals/>
 
         <section className="bg-primary text-primary-foreground py-16 md:py-24">
           <div className="container mx-auto text-center">
