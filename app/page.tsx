@@ -17,27 +17,27 @@ export default function Home() {
             <span className="text-xl font-bold tracking-wider">ELEGANCE</span>
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/new-arrivals" className="text-sm font-medium transition-colors hover:text-primary">
               New Arrivals
             </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/women" className="text-sm font-medium transition-colors hover:text-primary">
               Women
             </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/men" className="text-sm font-medium transition-colors hover:text-primary">
               Men
             </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/accessories" className="text-sm font-medium transition-colors hover:text-primary">
               Accessories
             </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/collections" className="text-sm font-medium transition-colors hover:text-primary">
               Collections
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary md:block hidden">
+            <Link href="/account" className="text-sm font-medium transition-colors hover:text-primary md:block hidden">
               Account
             </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="/cart" className="text-sm font-medium transition-colors hover:text-primary">
               Cart (0)
             </Link>
             <Button variant="outline" size="icon" className="md:hidden">
@@ -153,27 +153,27 @@ export default function Home() {
               <h3 className="mb-4 text-lg font-medium">Shop</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="/new-arrivals" className="text-muted-foreground hover:text-foreground">
                     New Arrivals
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="/women" className="text-muted-foreground hover:text-foreground">
                     Women
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="/men" className="text-muted-foreground hover:text-foreground">
                     Men
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="/accessories" className="text-muted-foreground hover:text-foreground">
                     Accessories
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="/sale" className="text-muted-foreground hover:text-foreground">
                     Sale
                   </Link>
                 </li>
